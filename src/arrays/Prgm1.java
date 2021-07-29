@@ -13,32 +13,56 @@ public class Prgm1 {
 		// if d > a.len
 		d = d % a.length;
 		Prgm1 p1 = new Prgm1();
-		//p1.rotate1(a, d); // time = d+a.len	space = d + a
-		p1.rotate12(a, d);	//time = d *(n-1)	space = 1
+		// p1.rotate1(a, d); // time = d+a.len space = d + a
+		// p1.rotate2(a, d); // time = d *(n-1) space = 1
+		p1.rotate3(a, d); // time = n	space = 1
 	}
 
-	private void rotate12(int[] a, int d) {
-		if (d == 0 || d == a.length) {
+	private void rotate3(int[] a, int d) {
+		if (d == 0) {
 			System.out.println(Arrays.toString(a));
 		}
-		if(d<0) {
+		if (d < 0) {
 			System.out.println("number is less than 0");
 		}
-		for(int i=0;i<d;i++) {
+
+		reverse(a, 0, d); // d
+		reverse(a, d, a.length); // n-d
+		reverse(a, 0, a.length); // n
+
+		System.out.println(Arrays.toString(a));
+	}
+
+	private void reverse(int[] a, int start, int end) {
+		for (int i = start, j = end - 1; i < j; i++, j--) {
+			int temp = a[i];
+			a[i] = a[j];
+			a[j] = temp;
+		}
+	}
+
+	private void rotate2(int[] a, int d) {
+		if (d == 0) {
+			System.out.println(Arrays.toString(a));
+		}
+		if (d < 0) {
+			System.out.println("number is less than 0");
+		}
+		for (int i = 0; i < d; i++) {
 			int temp = a[0];
-			for(int j=1;j<a.length;j++) {
-				a[j-1] = a[j];		//d *(n-1)
+			for (int j = 1; j < a.length; j++) {
+				a[j - 1] = a[j]; // d *(n-1)
 			}
-			a[a.length-1] = temp;
+			a[a.length - 1] = temp;
 		}
 		System.out.println(Arrays.toString(a));
 	}
 
 	private void rotate1(int[] a, int d) {
-		if (d == 0 || d == a.length) {
+		if (d == 0) {
 			System.out.println(Arrays.toString(a));
 		}
-		if(d<0) {
+		if (d < 0) {
 			System.out.println("number is less than 0");
 		}
 		int temp[] = new int[d];
