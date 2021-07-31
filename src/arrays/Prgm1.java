@@ -7,7 +7,7 @@ public class Prgm1 {
 
 	public static void main(String[] args) {
 		Scanner scn = new Scanner(System.in);
-		int a[] = { 1, 2, 3, 4, 5, 6, 7 };
+		int a[] = { 1, 2, 3, 4, 5, 6};
 		System.out.println("Enter a number: ");
 		int d = scn.nextInt();
 		// if d > a.len
@@ -26,15 +26,15 @@ public class Prgm1 {
 			System.out.println("number is less than 0");
 		}
 
-		reverse(a, 0, d); // d
-		reverse(a, d, a.length); // n-d
-		reverse(a, 0, a.length); // n
+		reverse(a, 0, d); // d/2
+		reverse(a, d, a.length); // (n-d)/2
+		reverse(a, 0, a.length); // n/2
 
 		System.out.println(Arrays.toString(a));
 	}
 
 	private void reverse(int[] a, int start, int end) {
-		for (int i = start, j = end - 1; i < j; i++, j--) {
+		for (int i = start, j = end - 1; i <= j; i++, j--) {
 			int temp = a[i];
 			a[i] = a[j];
 			a[j] = temp;
