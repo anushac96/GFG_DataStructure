@@ -10,11 +10,11 @@ public class Prgm4 {
 		System.out.println("Enter number from 2 to 9, both inclusive");
 		int k = scn.nextInt();
 		Prgm4 p1 = new Prgm4();
-		System.out.println(Arrays.toString(p1.printStrings(k)));
+		System.out.println(Arrays.toString(p1.printStrings(k)));	//time complexity = 3^k
 	}
 
 	private String[] printStrings(int k) {
-		if (k == 0) {
+		if (k == 0 || k == 1) {
 			String[] output = new String[1];
 			output[0] = "";
 			return output;

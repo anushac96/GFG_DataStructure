@@ -9,13 +9,13 @@ public class Prgm3 {
 		System.out.println("Enter total number of disc");
 		int k = scn.nextInt();
 		Prgm3 p1 = new Prgm3();
-		p1.towerOfHanoi(k, 'A', 'C', 'B');
+		p1.towerOfHanoi(k, 'A', 'C', 'B'); // time complexity = (2^n)-1
 	}
 
 	private void towerOfHanoi(int k, char source, char destination, char helper) {
 		if (k == 1) {
 			System.out.println("Moved " + k + "st disk from " + source + " to " + destination);
-			return ;
+			return;
 		}
 		towerOfHanoi((k - 1), source, helper, destination);
 		System.out.println("Moved " + k + "th disk from " + source + " to " + destination);
