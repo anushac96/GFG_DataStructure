@@ -3,11 +3,12 @@ package arrays;
 import java.util.Arrays;
 import java.util.Scanner;
 
+//Program for array rotation
 public class Prgm1 {
 
 	public static void main(String[] args) {
 		Scanner scn = new Scanner(System.in);
-		int a[] = { 1, 2, 3, 4, 5, 6};
+		int a[] = { 1, 2, 3, 4, 5, 6 };
 		System.out.println("Enter a number: ");
 		int d = scn.nextInt();
 		// if d > a.len
@@ -15,7 +16,7 @@ public class Prgm1 {
 		Prgm1 p1 = new Prgm1();
 		// p1.rotate1(a, d); // time = d+a.len space = d + a
 		// p1.rotate2(a, d); // time = d *(n-1) space = 1
-		p1.rotate3(a, d); // time = n	space = 1
+		p1.rotate3(a, d); // time = n space = 1
 	}
 
 	private void rotate3(int[] a, int d) {

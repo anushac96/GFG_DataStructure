@@ -2,13 +2,14 @@ package arrays;
 
 import java.util.Arrays;
 
+//Program to cyclically rotate an array by one
 public class Prgm2 {
 
 	public static void main(String[] args) {
 		int a[] = { 1, 2, 3, 4, 5, 6 };
 		Prgm2 p1 = new Prgm2();
-		// p1.rotate1(a);	// time = n	space = 1
-		p1.rotate2(a);	// time = n	space = 1
+		// p1.rotate1(a); // time = n space = 1
+		p1.rotate2(a); // time = n space = 1
 	}
 
 	private void rotate2(int[] a) {
