@@ -6,7 +6,7 @@ public class BinarySearch {
 		int a[] = { 10, 20, 30, 50, 60, 80, 100, 110, 130, 170 };
 		int key = 170;
 		BinarySearch b = new BinarySearch();
-		b.search(a, key);
+		b.search(a, key); // time complexity = log n
 
 	}
 

@@ -6,7 +6,7 @@ public class BinarySearchRecursion {
 		int a[] = { 10, 20, 30, 50, 60, 80, 100, 110, 130, 170 };
 		int key = 170;
 		BinarySearchRecursion b = new BinarySearchRecursion();
-		if (!b.search(0, a.length - 1, a, key))
+		if (!b.search(0, a.length - 1, a, key)) // time complexity = log n
 			System.out.println("not found");
 	}
 
