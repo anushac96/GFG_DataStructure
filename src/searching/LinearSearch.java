@@ -3,7 +3,7 @@ package searching;
 public class LinearSearch {
 
 	public static void main(String[] args) {
-		int a[] = { 10, 20, 80, 30, 60, 50, 110, 100, 130, 170 };
+		int a[] = { 10, 20, 30, 50, 60, 80, 100, 110, 130, 170 };
 		int key = 110;
 		LinearSearch l = new LinearSearch();
 		l.search1(a, key); // time complexity = O(n)
