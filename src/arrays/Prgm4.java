@@ -14,13 +14,13 @@ The sum overflows to a negative value and the value stays negative when divided 
 So it’s better to use it like this. This bug applies equally to merge sort and other divide and conquer algorithms.
 */
 public class Prgm4 {
-	int a[] = { 1, 2, 3 };
+	int a[] = { 11, 15, 6, 8, 9, 10 };
 	int start = 0;
 	int end = a.length - 1;
 
 	public static void main(String[] args) {
 		// Enter the sum to find its first pair
-		int k = 9;
+		int k = 16;
 		Prgm4 p1 = new Prgm4();
 		if (p1.findHighestValue(p1.a, k)) { // time complexity = log(n)+n = n
 			System.out.println("pair is (" + p1.a[p1.start] + "," + p1.a[p1.end] + ")");
@@ -52,8 +52,6 @@ public class Prgm4 {
 			return findPairs(end + 1, end, a, k);
 	}
 
-//1,2,3	end=3
-//3,1,2	
 	private boolean findPairs(int start1, int end1, int[] a, int k) { // time complexity n
 		while (start1 != end1) {
 			int sum = a[start1] + a[end1];
