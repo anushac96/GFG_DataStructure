@@ -3,26 +3,39 @@ package arrays;
 //Find maximum value of Sum( i*arr[i]) with only rotations on given array allowed
 
 public class Prgm5 {
-	int a[] = { 10, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+	int a[] = { 1, 20, 2, 10 };
 	int start = 0;
 	int end = a.length - 1;
 
 	public static void main(String[] args) {
 		Prgm5 p = new Prgm5();
 		System.out.println("maximum sum is " + p.findHighestValue(p.a)); // time complexity = n
-
 	}
 
 	private int findHighestValue(int[] a) { // time complexity = n+n=2n =>n
 		int indexOfHighestNumber = 0;
 		int i = 0;
-		while (i < a.length - 1) {
+		while (i < a.length) {
 			if (a[i] >= a[indexOfHighestNumber]) {
 				indexOfHighestNumber = i; // time complexity = n
 			}
 			i++;
 		}
-		return rotate(indexOfHighestNumber); // time complexity = n
+		// return rotate(indexOfHighestNumber); // time complexity = n
+		return calculateWithIndex(indexOfHighestNumber); // time complexity = n
+	}
+
+	private int calculateWithIndex(int indexOfHighestNumber) {
+		int index = a.length - 1;
+		int sum = 0;
+		while (index > 0) {
+			sum = sum + a[indexOfHighestNumber] * index;
+			--index;
+			--indexOfHighestNumber;
+			if (indexOfHighestNumber < 0)
+				indexOfHighestNumber = a.length - 1;
+		}
+		return sum;
 	}
 
 	private int rotate(int indexOfHighestNumber) { // time complexity = n+n=2n => n
