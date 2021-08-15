@@ -10,7 +10,7 @@ public class Prgm7 {
 	public static void main(String[] args) {
 		Prgm7 p = new Prgm7();
 		int k = 1;
-		p.rotateByK(k);
+		p.rotateByK(k);	// time complexity = n
 		k = 3;
 		p.rotateByK(k);
 		k = 4;

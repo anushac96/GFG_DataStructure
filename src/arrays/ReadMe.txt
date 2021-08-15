@@ -5,6 +5,7 @@ Prgm4	->	https://www.geeksforgeeks.org/given-a-sorted-and-rotated-array-find-if-
 Prgm5	->	https://www.geeksforgeeks.org/find-maximum-value-of-sum-iarri-with-only-rotations-on-given-array-allowed/
 Prgm6	->	https://www.geeksforgeeks.org/find-rotation-count-rotated-sorted-array/
 Prgm7	->	https://www.geeksforgeeks.org/quickly-find-multiple-left-rotations-of-an-array/
+Prgm8	->	https://www.geeksforgeeks.org/reversal-algorithm-right-rotation-array/
 
 TODO:
 	 https://www.geeksforgeeks.org/given-an-array-a-and-a-number-x-check-for-pair-in-a-with-sum-as-x/
