@@ -6,7 +6,9 @@ Prgm5	->	https://www.geeksforgeeks.org/find-maximum-value-of-sum-iarri-with-only
 Prgm6	->	https://www.geeksforgeeks.org/find-rotation-count-rotated-sorted-array/
 Prgm7	->	https://www.geeksforgeeks.org/quickly-find-multiple-left-rotations-of-an-array/
 Prgm8	->	https://www.geeksforgeeks.org/reversal-algorithm-right-rotation-array/
+Prgm9	->	https://www.geeksforgeeks.org/queries-left-right-circular-shift-array/
 
 TODO:
 	 https://www.geeksforgeeks.org/given-an-array-a-and-a-number-x-check-for-pair-in-a-with-sum-as-x/
 	 https://www.geeksforgeeks.org/find-minimum-element-in-a-sorted-and-rotated-array/
+	 https://www.geeksforgeeks.org/find-a-rotation-with-maximum-hamming-distance/
