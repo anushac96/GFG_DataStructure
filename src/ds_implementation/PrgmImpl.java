@@ -1,7 +1,6 @@
 package ds_implementation;
 
 import java.util.Arrays;
-import java.util.LinkedList;
 
 public class PrgmImpl {
 
@@ -54,15 +53,15 @@ public class PrgmImpl {
 		singlyLinkedList.insertFirst(3);
 		System.out.println("before clearing data ");
 		System.out.println("Elements in the singly linked list are:");
-		singlyLinkedList.show(singlyLinkedList);
+		singlyLinkedList.show();
 		System.out.println("Size of linked list: " + singlyLinkedList.getSize());
 		System.out.println("is linked list empty? " + singlyLinkedList.isEmpty());
-		singlyLinkedList.clear(singlyLinkedList);
+		singlyLinkedList.clear();
 		System.out.println();
 		System.out.println("after clearing data ");
 		System.out.println();
 		System.out.println("Elements in the singly linked list are:");
-		singlyLinkedList.show(singlyLinkedList);
+		singlyLinkedList.show();
 		System.out.println("Size of linked list: " + singlyLinkedList.getSize());
 		System.out.println("is linked list empty? " + singlyLinkedList.isEmpty());
 		System.out.println();
@@ -71,17 +70,73 @@ public class PrgmImpl {
 		singlyLinkedList.insertLast(1);
 		singlyLinkedList.insertLast(2);
 		singlyLinkedList.insertLast(3);
-		singlyLinkedList.show(singlyLinkedList);
+		singlyLinkedList.show();
 		System.out.println("Size of linked list: " + singlyLinkedList.getSize());
 		System.out.println();
 		System.out.println("insert 0.5 in 1st index");
 		singlyLinkedList.add(1, 0.5);
-		singlyLinkedList.show(singlyLinkedList);
+		singlyLinkedList.show();
 		System.out.println("Size of linked list: " + singlyLinkedList.getSize());
-		System.out.println("insert 3.5 in 1st index");
+		System.out.println("insert 2.5 in last index");
 		singlyLinkedList.add(4, 2.5);
-		singlyLinkedList.show(singlyLinkedList);
+		singlyLinkedList.show();
 		System.out.println("Size of linked list: " + singlyLinkedList.getSize());
+		System.out.println("delete from first");
+		singlyLinkedList.deletefirst();
+		singlyLinkedList.show();
+		System.out.println("delete from last");
+		singlyLinkedList.deleteLast();
+		singlyLinkedList.show();
+		System.out.println();
+		System.out.println();
+
+		// Doubly LinkedList
+		System.out.println("//////// DOUBLY LINKED LIST ////////");
+		DoublyLinkedList doublyLinkedList = new DoublyLinkedList();
+		System.out.println("inserting element at head");
+		doublyLinkedList.insertFirst(0);
+		doublyLinkedList.insertFirst(1);
+		doublyLinkedList.insertFirst(2);
+		doublyLinkedList.insertFirst(3);
+		System.out.println("Elements in the singly linked list are:");
+		doublyLinkedList.show();
+		System.out.println("Size of linked list: " + doublyLinkedList.getSize());
+		System.out.println("is linked list empty? " + doublyLinkedList.isEmpty());
+		System.out.println();
+		doublyLinkedList.clear();
+		System.out.println();
+		System.out.println("after clearing data ");
+		System.out.println();
+		System.out.println("Elements in the singly linked list are:");
+		doublyLinkedList.show();
+		System.out.println("Size of linked list: " + doublyLinkedList.getSize());
+		System.out.println("is linked list empty? " + doublyLinkedList.isEmpty());
+		System.out.println();
+		System.out.println("inserting element at tail");
+		doublyLinkedList.insertLast(0);
+		doublyLinkedList.insertLast(1);
+		doublyLinkedList.insertLast(2);
+		doublyLinkedList.insertLast(3);
+		System.out.println("Elements in the doubly linked list are:");
+		doublyLinkedList.show();
+		System.out.println("Size of linked list: " + doublyLinkedList.getSize());
+		System.out.println();
+		System.out.println("insert 0.5 in 1st index");
+		doublyLinkedList.addAt(1, 0.5);
+		doublyLinkedList.show();
+		System.out.println("Size of linked list: " + doublyLinkedList.getSize());
+		System.out.println("insert 2.5 in last index");
+		doublyLinkedList.addAt(4, 2.5);
+		doublyLinkedList.show();
+		System.out.println("Size of linked list: " + doublyLinkedList.getSize());
+		System.out.println("delete from first");
+		doublyLinkedList.deletefirst();
+		doublyLinkedList.show();
+		System.out.println("delete from last");
+		doublyLinkedList.deleteLast();
+		doublyLinkedList.show();
+		// System.out.println();
+		// System.out.println();
 
 	}
 

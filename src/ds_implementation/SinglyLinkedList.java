@@ -37,9 +37,9 @@ public class SinglyLinkedList<T> {
 		}
 	}
 
-	public void clear(SinglyLinkedList<T> list) {
+	public void clear() {
 		if (headNode == null) {
-			System.out.println("No elements to delete");
+			System.out.println("No elements to clear");
 		} else {
 			Node currentNode = headNode;
 			Node nextNode = headNode.nextNode;
@@ -79,10 +79,10 @@ public class SinglyLinkedList<T> {
 			int count = 0;
 			Node currentNode = headNode;
 			while (currentNode.nextNode != null) {
-				if (count+1 == index) {
+				if (count + 1 == index) {
 					Node nextNode = currentNode.nextNode;
 					currentNode.nextNode = newNode;
-					newNode.nextNode = nextNode;	
+					newNode.nextNode = nextNode;
 					++size;
 					break;
 				} else {
@@ -93,8 +93,37 @@ public class SinglyLinkedList<T> {
 		}
 	}
 
-	public void show(SinglyLinkedList<T> list) {
-		if (list.headNode == null) {
+	public void deletefirst() {
+		if (headNode == null) {
+			System.out.println("no element to delete");
+		} else {
+			Node currNode = headNode.nextNode;
+			headNode.data = null;
+			headNode.nextNode = null;
+			headNode = currNode;
+			--size;
+		}
+	}
+
+	public void deleteLast() {
+		if (headNode == null) {
+			System.out.println("No element to delete");
+		}
+		if (headNode.nextNode == null) {
+			headNode = null;
+			--size;
+		} else {
+			Node secondLastNode = headNode;
+			while (secondLastNode.nextNode.nextNode != null) {
+				secondLastNode = secondLastNode.nextNode;
+			}
+			secondLastNode.nextNode = null;
+			--size;
+		}
+	}
+
+	public void show() {
+		if (headNode == null) {
 			System.out.println("No element");
 		} else {
 			Node currentNode = headNode;
