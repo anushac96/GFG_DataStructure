@@ -135,8 +135,24 @@ public class PrgmImpl {
 		System.out.println("delete from last");
 		doublyLinkedList.deleteLast();
 		doublyLinkedList.show();
-		// System.out.println();
-		// System.out.println();
+		System.out.println();
+		System.out.println();
+
+		// Implementing stack by using array
+		System.out.println("Implementing stack by using array");
+		StackFromArray stackFromArray = new StackFromArray();
+		stackFromArray.print();
+		stackFromArray.push(0);
+		stackFromArray.push(1);
+		stackFromArray.push(2);
+		stackFromArray.push(3);
+		stackFromArray.push(4);
+		System.out.println("after pushing 0,1,2,3,4");
+		stackFromArray.print();
+		System.out.println("after poping");
+		stackFromArray.pop();
+		stackFromArray.print();
+		System.out.println("peek of the stack: " + stackFromArray.peek());
 
 	}
 

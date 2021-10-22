@@ -13,6 +13,14 @@ public class DoublyLinkedList<T> {
 		public Node(T d) {
 			data = d;
 		}
+		
+		// TODO: use this constructor to be more optimal
+		public Node(T d, Node pNode, Node nNode) {
+			this.data = d;
+			this.prevNode = pNode;
+			this.nextNode = nNode;
+			
+		}
 	}
 
 	public void insertFirst(T data) {
@@ -81,7 +89,10 @@ public class DoublyLinkedList<T> {
 		}
 	}
 
-	// TODO: remove(node)
+	// TODO: remove(node)  // node.data can be null
+	// TODO: removeAt(index)
+	// TODO: indexOf(Object)
+	// TODO: contains(Object)
 
 	public void deletefirst() {
 		if (headNode == null) {
@@ -114,6 +125,8 @@ public class DoublyLinkedList<T> {
 		if (index < 0 || index >= size) {
 			throw new IndexOutOfBoundsException();
 		} else {
+			
+			// TODO: check if index > or < that size/2 to reduce time complexity
 			int count = 0;
 			Node prevNode = headNode;
 			Node newNode = new Node(data);
@@ -131,6 +144,7 @@ public class DoublyLinkedList<T> {
 		}
 	}
 
+	// TODO: try by implementing Iterator
 	public void show() {
 		if (headNode == null) {
 			System.out.println("no element");
