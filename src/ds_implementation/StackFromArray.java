@@ -22,8 +22,13 @@ public class StackFromArray {
 		return top == -1;
 	}
 
-	public Object peek() {
-		return a[top];
+	public Object peek() throws Exception {
+		if (isEmpty()) {
+			// System.out.println("stack is empty");
+			return "stack is empty";
+		} else {
+			return a[top];
+		}
 	}
 
 	public void print() {

@@ -1,11 +1,12 @@
 package ds_implementation;
 
 import java.util.Arrays;
+import java.util.Iterator;
 
 public class PrgmImpl {
 
 	@SuppressWarnings({ "unchecked", "rawtypes" })
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 
 		// DynamicArray
 		System.out.println("//////// ARRAYS ////////");
@@ -153,7 +154,30 @@ public class PrgmImpl {
 		stackFromArray.pop();
 		stackFromArray.print();
 		System.out.println("peek of the stack: " + stackFromArray.peek());
+		System.out.println();
+		System.out.println();
+
+		// Implementing stack by using java linkedList
+		System.out.println("Implementing stack by using java linkedList");
+		StackFromLinkedList stackFromLinkedList = new StackFromLinkedList();
+		stackFromLinkedList.print();
+		stackFromLinkedList.push(0);
+		stackFromLinkedList.push(1);
+		stackFromLinkedList.push(2);
+		stackFromLinkedList.push(3);
+		stackFromLinkedList.push(4);
+		System.out.println("after pushing 0,1,2,3,4");
+		Iterator list = stackFromLinkedList.print();
+		while (list.hasNext())
+			System.out.print(list.next() + " ");
+		System.out.println();
+		System.out.println("after poping");
+		stackFromLinkedList.pop();
+		list = stackFromLinkedList.print();
+		while (list.hasNext())
+			System.out.print(list.next() + " ");
+		System.out.println();
+		System.out.println("peek of the stack: " + stackFromLinkedList.peek());
 
 	}
-
 }
