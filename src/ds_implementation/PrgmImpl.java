@@ -196,8 +196,31 @@ public class PrgmImpl {
 		queueFromArray.dequeue();
 		queueFromArray.print();
 		System.out.println("peek of the stack: " + queueFromArray.peek());
-		
-		
+		System.out.println();
+		System.out.println();
+
+		// Implementing queue by using array
+		System.out.println("Implementing queue by using array");
+		QueueFromLinkedList queueFromLinkedList = new QueueFromLinkedList();
+		queueFromLinkedList.enqueue(0);
+		queueFromLinkedList.enqueue(1);
+		queueFromLinkedList.enqueue(2);
+		queueFromLinkedList.enqueue(3);
+		queueFromLinkedList.enqueue(4);
+		System.out.println("after enqueuing 0,1,2,3,4");
+		list = queueFromLinkedList.print();
+		while (list.hasNext()) {
+			System.out.print(list.next() + " ");
+		}
+		System.out.println();
+		System.out.println("after dequeuing");
+		queueFromLinkedList.dequeue();
+		list = queueFromLinkedList.print();
+		while (list.hasNext()) {
+			System.out.print(list.next() + " ");
+		}
+		System.out.println();
+		System.out.println("peek of the stack: " + queueFromLinkedList.peek());
 
 	}
 }
