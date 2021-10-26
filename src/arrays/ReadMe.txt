@@ -8,6 +8,7 @@ Prgm7	->	https://www.geeksforgeeks.org/quickly-find-multiple-left-rotations-of-a
 Prgm8	->	https://www.geeksforgeeks.org/reversal-algorithm-right-rotation-array/
 Prgm9	->	https://www.geeksforgeeks.org/queries-left-right-circular-shift-array/
 Prgm10	->	https://www.geeksforgeeks.org/print-left-rotation-array/
+Prhm11	->	https://www.geeksforgeeks.org/find-element-given-index-number-rotations/
 
 TODO:
 	 https://www.geeksforgeeks.org/given-an-array-a-and-a-number-x-check-for-pair-in-a-with-sum-as-x/
