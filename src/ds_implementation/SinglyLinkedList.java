@@ -53,6 +53,8 @@ public class SinglyLinkedList<T> {
 			headNode = currentNode = null;
 			--size;
 		}
+		// or head = null;
+		// size = 0;
 	}
 
 	public int getSize() {
@@ -119,6 +121,53 @@ public class SinglyLinkedList<T> {
 			}
 			secondLastNode.nextNode = null;
 			--size;
+		}
+	}
+
+	public void deleteThis(T data) {
+		if (headNode == null) {
+			System.out.println("No element in the list to delete");
+		}
+		if (headNode.data.equals(data)) {
+			headNode = headNode.nextNode;
+			--size;
+		} else {
+			Node nextNode = headNode.nextNode;
+			Node currNode = headNode;
+			while (nextNode != null) {
+				if (nextNode.data.equals(data)) {
+					currNode.nextNode = nextNode.nextNode;
+					--size;
+					return;
+				} else {
+					currNode = currNode.nextNode;
+					nextNode = nextNode.nextNode;
+				}
+			}
+			System.out.println("element not found to delete");
+		}
+	}
+
+	public void deleteAt(int index) {
+		if (index < 0 || index > size) {
+			System.out.println("index not valid");
+		} else if (index == 1) {
+			headNode = headNode.nextNode;
+		} else {
+			Node curNode = headNode;
+			Node nexNode = headNode.nextNode;
+			int count = 2;
+			while (nexNode != null) {
+				if (count == index) {
+					curNode.nextNode = nexNode.nextNode;
+					--size;
+					return;
+				} else {
+					curNode = curNode.nextNode;
+					nexNode = nexNode.nextNode;
+					++count;
+				}
+			}
 		}
 	}
 

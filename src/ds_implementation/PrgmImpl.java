@@ -88,6 +88,12 @@ public class PrgmImpl {
 		System.out.println("delete from last");
 		singlyLinkedList.deleteLast();
 		singlyLinkedList.show();
+		System.out.println("remove 2.5 from list");
+		singlyLinkedList.deleteThis(2.5);
+		singlyLinkedList.show();
+		System.out.println("remove 1st from list");
+		singlyLinkedList.deleteAt(1);
+		singlyLinkedList.show();
 		System.out.println();
 		System.out.println();
 
