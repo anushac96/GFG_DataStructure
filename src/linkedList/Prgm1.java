@@ -24,20 +24,44 @@ public class Prgm1 {
 	}
 
 	private int findMid() {
+		// if (headNode == null) {
+		// System.out.println("no element to find mid");
+		// return -1;
+		// } else if (headNode.nextNode == null || headNode.nextNode.nextNode == null) {
+		// return headNode.data;
+		// } else {
+		// Node midNode = headNode.nextNode;
+		// Node tailNode = headNode.nextNode.nextNode;
+		// while (tailNode.nextNode != null && tailNode.nextNode.nextNode != null) {
+		// midNode = midNode.nextNode;
+		// tailNode = tailNode.nextNode.nextNode;
+		// }
+		// return midNode.data;
+		// }
+
+		// updated
 		if (headNode == null) {
-			System.out.println("no element to find mid");
-		} else if (headNode.nextNode == null || headNode.nextNode.nextNode == null) {
-			return headNode.data;
+			return -1;
 		} else {
-			Node midNode = headNode.nextNode;
-			Node tailNode = headNode.nextNode.nextNode;
-			while (tailNode.nextNode != null && tailNode.nextNode.nextNode != null) {
-				midNode = midNode.nextNode;
-				tailNode = tailNode.nextNode.nextNode;
+			Node fastNode = headNode;
+			Node slowNode = headNode;
+
+			while (fastNode.nextNode != null && fastNode.nextNode.nextNode != null) {
+				fastNode = fastNode.nextNode.nextNode;
+				slowNode = slowNode.nextNode;
 			}
-			return midNode.data;
+			return slowNode.data;
 		}
-		return 0;
+
+		// or
+
+		// Node midNode = headNode;
+		// Node tailNode = headNode;
+		// while (tailNode != null && tailNode.nextNode != null) {
+		// midNode = midNode.nextNode;
+		// tailNode = tailNode.nextNode.nextNode;
+		// }
+		// return midNode.data;
 	}
 
 	private void print() {
