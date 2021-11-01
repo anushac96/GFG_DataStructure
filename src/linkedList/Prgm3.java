@@ -19,7 +19,9 @@ public class Prgm3 {
 		prgm3.insert(9);
 		prgm3.insert(10);
 		prgm3.print();
-		prgm3.headNode.nextNode.nextNode.nextNode.nextNode = prgm3.headNode.nextNode;
+		prgm3.headNode.nextNode.nextNode.nextNode.nextNode.nextNode = prgm3.headNode.nextNode;
+		System.out.println("creating loop: 1 2 3 4 5 2 3 4 5 2 3 4 5 ...");
+		//prgm3.print();
 		System.out.println("number of nodes in a loop: " + prgm3.countNodeInLoop());
 	}
 
@@ -37,7 +39,7 @@ public class Prgm3 {
 					tempNode = tempNode.nextNode;
 					++count;
 				}
-				return ++count;
+				return count;
 			}
 		}
 		return 0;
