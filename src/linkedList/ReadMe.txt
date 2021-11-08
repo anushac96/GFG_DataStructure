@@ -2,3 +2,4 @@ Prgm1	->	https://www.geeksforgeeks.org/write-a-c-function-to-print-the-middle-of
 Prgm2	->	https://www.geeksforgeeks.org/detect-loop-in-a-linked-list/
 Prgm3	->	https://www.geeksforgeeks.org/find-length-of-loop-in-linked-list/
 Prgm4	->	https://www.geeksforgeeks.org/detect-and-remove-loop-in-a-linked-list/
+Prgm5	-> 	https://www.geeksforgeeks.org/function-to-check-if-a-singly-linked-list-is-palindrome/
