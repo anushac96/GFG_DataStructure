@@ -4,6 +4,7 @@ import java.util.HashSet;
 import java.util.LinkedList;
 
 // Remove duplicates from a sorted linked list
+// Remove duplicates from an unsorted linked list
 
 public class Prgm6 {
 	Node headNode;
@@ -57,6 +58,9 @@ public class Prgm6 {
 		prgm6.push(6);
 		prgm6.push(6);
 		prgm6.push(6);
+		prgm6.push(1);
+		prgm6.push(1);
+		prgm6.push(1);
 		System.out.println("///////// Using HashMap /////////");
 		System.out.println("Before removing duplicates: ");
 		prgm6.print();
