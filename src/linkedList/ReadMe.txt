@@ -5,3 +5,4 @@ Prgm4	->	https://www.geeksforgeeks.org/detect-and-remove-loop-in-a-linked-list/
 Prgm5	-> 	https://www.geeksforgeeks.org/function-to-check-if-a-singly-linked-list-is-palindrome/
 Prgm6	->	https://www.geeksforgeeks.org/remove-duplicates-from-a-sorted-linked-list/
         ->	https://www.geeksforgeeks.org/remove-duplicates-from-an-unsorted-linked-list/
+Prgm7	->	https://www.geeksforgeeks.org/swap-nodes-in-a-linked-list-without-swapping-data/
