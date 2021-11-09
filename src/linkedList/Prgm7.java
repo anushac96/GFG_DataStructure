@@ -49,20 +49,18 @@ public class Prgm7 {
 		if (a_Curr_Node == b_Curr_Node)
 			return;
 		else if (a_Curr_Node != null && b_Curr_Node != null) {
-			if (a_Prev_Node == null || b_Prev_Node == null) {
-				try {
-					b_Prev_Node.nextNode = a_Curr_Node;
-					Node tempNode = b_Curr_Node.nextNode;
-					b_Curr_Node.nextNode = a_Curr_Node.nextNode;
-					a_Curr_Node.nextNode = tempNode;
-					headNode = b_Curr_Node;
-				} catch (Exception e) {
-					a_Prev_Node.nextNode = b_Curr_Node;
-					Node tempNode = a_Curr_Node.nextNode;
-					a_Curr_Node.nextNode = b_Curr_Node.nextNode;
-					b_Curr_Node.nextNode = tempNode;
-					headNode = a_Curr_Node;
-				}
+			if (a_Prev_Node == null) {
+				b_Prev_Node.nextNode = a_Curr_Node;
+				Node tempNode = b_Curr_Node.nextNode;
+				b_Curr_Node.nextNode = a_Curr_Node.nextNode;
+				a_Curr_Node.nextNode = tempNode;
+				headNode = b_Curr_Node;
+			} else if (b_Prev_Node == null) {
+				a_Prev_Node.nextNode = b_Curr_Node;
+				Node tempNode = a_Curr_Node.nextNode;
+				a_Curr_Node.nextNode = b_Curr_Node.nextNode;
+				b_Curr_Node.nextNode = tempNode;
+				headNode = a_Curr_Node;
 			} else {
 				b_Prev_Node.nextNode = a_Curr_Node;
 				Node tempNode = b_Curr_Node.nextNode;

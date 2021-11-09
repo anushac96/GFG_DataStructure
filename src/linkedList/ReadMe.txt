@@ -6,3 +6,4 @@ Prgm5	-> 	https://www.geeksforgeeks.org/function-to-check-if-a-singly-linked-lis
 Prgm6	->	https://www.geeksforgeeks.org/remove-duplicates-from-a-sorted-linked-list/
         ->	https://www.geeksforgeeks.org/remove-duplicates-from-an-unsorted-linked-list/
 Prgm7	->	https://www.geeksforgeeks.org/swap-nodes-in-a-linked-list-without-swapping-data/
+Prgm8	->	https://www.geeksforgeeks.org/pairwise-swap-elements-of-a-given-linked-list/
