@@ -17,7 +17,7 @@ public class Prgm12 {
 		prgm12.insert(7);
 		System.out.println("elements in the linkedlist are: ");
 		prgm12.print();
-		prgm12.segregate();
+		prgm12.segregate();	// time complexity = O(n)
 		prgm12.print();
 
 	}
