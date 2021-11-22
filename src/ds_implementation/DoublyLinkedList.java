@@ -184,11 +184,8 @@ public class DoublyLinkedList<T> {
 		if (headNode == null) {
 			System.out.println("no element to delete");
 		} else {
-			Node currNode = headNode.nextNode;
-			headNode.data = null;
-			headNode.nextNode = null;
-			currNode.prevNode = null;
-			headNode = currNode;
+			headNode = headNode.nextNode;
+			headNode.prevNode = null;
 			--size;
 		}
 	}
