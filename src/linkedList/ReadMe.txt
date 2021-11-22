@@ -14,3 +14,4 @@ Prgm12	->	https://www.geeksforgeeks.org/segregate-even-and-odd-elements-in-a-lin
 Prgm13	->	https://www.geeksforgeeks.org/reverse-a-linked-list/
 Prgm14	->	https://www.geeksforgeeks.org/xor-linked-list-a-memory-efficient-doubly-linked-list-set-1/
 			https://www.geeksforgeeks.org/xor-linked-list-a-memory-efficient-doubly-linked-list-set-2/
+Prgm15	->	https://www.geeksforgeeks.org/reverse-a-doubly-linked-list/
