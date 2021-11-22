@@ -12,3 +12,5 @@ Prgm10	->	https://www.geeksforgeeks.org/intersection-of-two-sorted-linked-lists/
 Prgm11	->	https://www.geeksforgeeks.org/write-a-function-to-get-the-intersection-point-of-two-linked-lists/
 Prgm12	->	https://www.geeksforgeeks.org/segregate-even-and-odd-elements-in-a-linked-list/
 Prgm13	->	https://www.geeksforgeeks.org/reverse-a-linked-list/
+Prgm14	->	https://www.geeksforgeeks.org/xor-linked-list-a-memory-efficient-doubly-linked-list-set-1/
+			https://www.geeksforgeeks.org/xor-linked-list-a-memory-efficient-doubly-linked-list-set-2/
