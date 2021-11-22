@@ -142,11 +142,19 @@ public class PrgmImpl {
 		System.out.println("delete from last");
 		doublyLinkedList.deleteLast();
 		doublyLinkedList.show();
+		System.out.println("does the list contains 0.5?: " + doublyLinkedList.contains(0.5));
+		System.err.println("index of 0.5 is: " + doublyLinkedList.indexOf(0.5));
+		System.err.println("remove 1st element");
+		doublyLinkedList.removeAt(1);
+		doublyLinkedList.show();
+		System.out.println("remove 2.5 from the list");
+		doublyLinkedList.remove(2.5);
+		doublyLinkedList.show();
 		System.out.println();
 		System.out.println();
 
 		// Implementing stack by using array
-		System.out.println("Implementing stack by using array");
+		System.out.println("//////// Implementing stack by using array ////////");
 		StackFromArray stackFromArray = new StackFromArray();
 		stackFromArray.print();
 		stackFromArray.push(0);
@@ -227,6 +235,5 @@ public class PrgmImpl {
 		}
 		System.out.println();
 		System.out.println("peek of the stack: " + queueFromLinkedList.peek());
-
 	}
 }

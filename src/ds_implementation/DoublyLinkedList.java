@@ -13,13 +13,13 @@ public class DoublyLinkedList<T> {
 		public Node(T d) {
 			data = d;
 		}
-		
+
 		// TODO: use this constructor to be more optimal
 		public Node(T d, Node pNode, Node nNode) {
 			this.data = d;
 			this.prevNode = pNode;
 			this.nextNode = nNode;
-			
+
 		}
 	}
 
@@ -89,10 +89,96 @@ public class DoublyLinkedList<T> {
 		}
 	}
 
-	// TODO: remove(node)  // node.data can be null
-	// TODO: removeAt(index)
-	// TODO: indexOf(Object)
-	// TODO: contains(Object)
+	public void remove(T data) {
+		Node currNode = headNode;
+		if (currNode == null) {
+			System.out.println("linked linst is empty");
+		} else {
+			while (currNode != null) {
+				if (!currNode.data.equals(data))
+					currNode = currNode.nextNode;
+				else {
+					Node prevNode = currNode.prevNode;
+					Node nextNode = currNode.nextNode;
+					if (prevNode == null) {
+						nextNode.prevNode = null;
+						headNode = nextNode;
+					} else if (nextNode == null) {
+						prevNode.nextNode = null;
+						tailNode = prevNode;
+					} else {
+						prevNode.nextNode = nextNode;
+						nextNode.prevNode = prevNode;
+					}
+					--size;
+					return;
+				}
+			}
+			System.out.println("element not found");
+
+		}
+	}
+
+	public void removeAt(int index) {
+		Node currNode = headNode;
+		int count = 1;
+		if (index < 0 || index > getSize()) {
+			System.out.println("index out of bound");
+		} else if (currNode == null) {
+			System.out.println("linked linst is empty");
+		} else {
+			while (count != index) {
+				currNode = currNode.nextNode;
+				++count;
+			}
+			Node prevNode = currNode.prevNode;
+			Node nextNode = currNode.nextNode;
+			if (prevNode == null) {
+				nextNode.prevNode = null;
+				headNode = nextNode;
+			} else if (nextNode == null) {
+				prevNode.nextNode = null;
+				tailNode = prevNode;
+			} else {
+				prevNode.nextNode = nextNode;
+				nextNode.prevNode = prevNode;
+			}
+			--size;
+		}
+	}
+
+	public int indexOf(T data) {
+		Node currNode = headNode;
+		int count = 0;
+		if (currNode == null) {
+			System.out.println("linked linst is empty");
+		} else {
+			while (currNode != null) {
+				if (currNode.data.equals(data)) {
+					return ++count;
+				} else {
+					currNode = currNode.nextNode;
+					++count;
+				}
+			}
+		}
+		return -1;
+	}
+
+	public boolean contains(T data) {
+		Node currNode = headNode;
+		if (currNode == null) {
+			System.out.println("linked linst is empty");
+		} else {
+			while (currNode != null) {
+				if (currNode.data.equals(data)) {
+					return true;
+				}
+				currNode = currNode.nextNode;
+			}
+		}
+		return false;
+	}
 
 	public void deletefirst() {
 		if (headNode == null) {
@@ -125,7 +211,7 @@ public class DoublyLinkedList<T> {
 		if (index < 0 || index >= size) {
 			throw new IndexOutOfBoundsException();
 		} else {
-			
+
 			// TODO: check if index > or < that size/2 to reduce time complexity
 			int count = 0;
 			Node prevNode = headNode;
