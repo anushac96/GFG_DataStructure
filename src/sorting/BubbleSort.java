@@ -1,7 +1,11 @@
 package sorting;
 
 public class BubbleSort {
-
+	
+// 1. compare adjacent element
+// 2. if(a[i]>a[j]), then swap
+// 3. sorting starts happening from right
+	
 	public static void main(String[] args) {
 
 		int a[] = { 4, 1, 10, -3, 12 }; // len = 5 ----> 0-4
