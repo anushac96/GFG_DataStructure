@@ -6,28 +6,39 @@ import java.util.Scanner;
 public class Prgm3 {
 
 	public static void main(String[] args) {
-		int a[] = { 4, 5, 6, 7, 1, 2, 3 };
+		int a[] = { 4, 5, 6, 7, 8, 1, 2, 3 };
 		Prgm3 p1 = new Prgm3();
 		Scanner scn = new Scanner(System.in);
 		System.out.println("Enter a number to search");
 		int k = scn.nextInt();
-		p1.search1(a, k); // time = log(n) space = 1
+		int index = p1.search1(a, 0, a.length - 1, k); // time = log(n) space = 1
+		if (index >= 0) {
+			System.out.println("number found at index: " + index);
+		} else {
+			System.out.println("not found");
+		}
 	}
 
-	private void search1(int[] a, int k) {
-		int start = 0;
-		int end = a.length - 1;
-		while (start <= end) {
-			int mid = (start + end) / 2;
-			if (k == a[mid]) {
-				System.out.println(k + " is found at " + mid + " index");
-				return;
+	private int search1(int a[], int low, int high, int key) {
+		while (low <= high) {
+			int mid = low + (high - low) / 2;
+			if (key == a[mid]) {
+				return mid;
 			}
-			if (k >= a[start] && k < a[mid]) {
-				end = mid - 1;
-			} else
-				start = mid + 1;
+			if (a[low] < a[mid]) {
+				if (key >= a[low] && key < a[mid]) {
+					high = mid - 1;
+				} else {
+					low = mid + 1;
+				}
+			} else {
+				if (key > a[mid] && key <= a[high]) {
+					low = mid + 1;
+				} else {
+					high = mid - 1;
+				}
+			}
 		}
-		System.out.print("key not found");
+		return -1;
 	}
 }
