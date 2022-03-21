@@ -11,6 +11,7 @@ public class Prgm3 {
 		Scanner scn = new Scanner(System.in);
 		System.out.println("Enter a number to search");
 		int k = scn.nextInt();
+		scn.close();
 		int index = p1.search1(a, 0, a.length - 1, k); // time = log(n) space = 1
 		if (index >= 0) {
 			System.out.println("number found at index: " + index);
@@ -19,7 +20,7 @@ public class Prgm3 {
 		}
 	}
 
-	private int search1(int a[], int low, int high, int key) {
+	public int search1(int a[], int low, int high, int key) {
 		while (low <= high) {
 			int mid = low + (high - low) / 2;
 			if (key == a[mid]) {
